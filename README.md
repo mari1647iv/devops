@@ -27,7 +27,11 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites <a name = "prerequisites"></a>
 
-Download the project using `git clone`
+Download the project using
+
+```bash
+git clone https://github.com/mari1647iv/devops.git
+```
 
 Set up the environment using setup.py:
 
@@ -49,7 +53,7 @@ source venv/bin/activate
 python3 -m pip install -r requirements.txt 
 ```
 
-### Installing <a name = "installing"></a>
+### Installation <a name = "installation"></a>
 
 Start the application:
 
@@ -86,7 +90,7 @@ deactivate
 
 ## Author <a name = "author"></a>
 
-Marina Ivanova, Innopolis University BS18-SE-01
+**Marina Ivanova, Innopolis University BS18-SE-01**
 
 + Github: @mari1647iv
 + Email: m.ivanova@innopolis.university
