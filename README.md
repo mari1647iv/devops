@@ -1,3 +1,9 @@
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+
 # Moscow Time - Python Web Application
 
 <!-- TABLE OF CONTENTS -->
@@ -14,6 +20,7 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#author">Author</a></li>
+    <li><a href="#license">License</a></li>
   </ul>
 </details>
 
@@ -96,3 +103,20 @@ deactivate
 + Email: m.ivanova@innopolis.university
 
 Project Link: https://github.com/mari1647iv/devops
+
+## License <a name = "license"></a>
+
+Distributed under the MIT License. See `LICENSE.md` for more information.
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/mari1647iv/devops.svg?style=for-the-badge
+[contributors-url]: https://github.com/mari1647iv/devops/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/mari1647iv/devops.svg?style=for-the-badge
+[forks-url]: https://github.com/mari1647iv/devops/network/members
+[stars-shield]: https://img.shields.io/github/stars/mari1647iv/devops.svg?style=for-the-badge
+[stars-url]: https://github.com/mari1647iv/devops/stargazers
+[issues-shield]: https://img.shields.io/github/issues/mari1647iv/devops.svg?style=for-the-badge
+[issues-url]: https://github.com/mari1647iv/devops/issues
+[license-shield]: https://img.shields.io/github/license/mari1647iv/devops.svg?style=for-the-badge
+[license-url]: https://github.com/mari1647iv/devops/blob/main/LICENSE.md
