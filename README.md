@@ -1,7 +1,7 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
+[![Docker][docker-shield]][docker-url]
 [![MIT License][license-shield]][license-url]
 
 # Moscow Time - Python Web Application
@@ -94,23 +94,29 @@ Download the project using
 git clone https://github.com/mari1647iv/devops.git
 ```
 
-Build docker image
+Build docker image:
 
 ```bash
 cd app_python
-docker build --tag app_python .
+docker build --tag mari1647iv/devops:app_python .
 ```
 
-To run the docker image enter:
+or pull it from the Docker Hub repository:
 
 ```bash
-docker run -p 5000:5000 app_python
+docker pull mari1647iv/devops:app_python
 ```
 
-or run it in detached mode:
+Run the docker image
 
 ```bash
-docker run -d -p 5000:5000 app_python
+docker run -p 5000:5000 mari1647iv/devops:app_python
+```
+
+To run it in detached mode use:
+
+```bash
+docker run -d -p 5000:5000 mari1647iv/devops:app_python
 ```
 
 ## Usage <a name = "usage"></a>
@@ -146,9 +152,9 @@ Distributed under the MIT License. See `LICENSE.md` for more information.
 [contributors-url]: https://github.com/mari1647iv/devops/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/mari1647iv/devops.svg?style=for-the-badge
 [forks-url]: https://github.com/mari1647iv/devops/network/members
-[stars-shield]: https://img.shields.io/github/stars/mari1647iv/devops.svg?style=for-the-badge
-[stars-url]: https://github.com/mari1647iv/devops/stargazers
 [issues-shield]: https://img.shields.io/github/issues/mari1647iv/devops.svg?style=for-the-badge
 [issues-url]: https://github.com/mari1647iv/devops/issues
+[docker-shield]: https://img.shields.io/docker/image-size/mari1647iv/devops?sort=date&style=for-the-badge
+[docker-url]: https://hub.docker.com/r/mari1647iv/devops/
 [license-shield]: https://img.shields.io/github/license/mari1647iv/devops.svg?style=for-the-badge
 [license-url]: https://github.com/mari1647iv/devops/blob/main/LICENSE.md
