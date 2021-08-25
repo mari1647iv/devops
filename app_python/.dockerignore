@@ -1,3 +1,4 @@
+Dockerfile
+*.md
 /venv
-links_*.txt
 __pycache__

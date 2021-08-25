@@ -16,6 +16,7 @@
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
+        <li><a href="#docker">Docker</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
@@ -57,7 +58,7 @@ python3 -m venv venv
 
 source venv/bin/activate
 
-python3 -m pip install -r requirements.txt 
+python3 -m pip install -r app_python/requirements.txt
 ```
 
 ### Installation <a name = "installation"></a>
@@ -66,25 +67,55 @@ Start the application:
 
 ```bash
 cd app_python
-python3 main.py 
+python3 main.py
 ```
 
-As a result you will get the project running on your localhost with port 8080
-```bash 
+As a result you will get the project running on your localhost with port 5000
+
+```bash
  * Serving Flask app "main" (lazy loading)
  * Environment: production
    WARNING: This is a development server. Do not use it in a production deployment.
    Use a production WSGI server instead.
  * Debug mode: on
- * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
  * Restarting with stat
  * Debugger is active!
  * Debugger PIN: 830-674-667
 ```
 
+### Docker <a name = "docker"></a>
+
+The application could be built and running using `Docker`.
+
+Download the project using
+
+```bash
+git clone https://github.com/mari1647iv/devops.git
+```
+
+Build docker image
+
+```bash
+cd app_python
+docker build --tag app_python .
+```
+
+To run the docker image enter:
+
+```bash
+docker run -p 5000:5000 app_python
+```
+
+or run it in detached mode:
+
+```bash
+docker run -d -p 5000:5000 app_python
+```
+
 ## Usage <a name = "usage"></a>
 
-The application is running locally on port 8080. The web pages demonstrates the current time in Moscow. As the page is refreshed the time updates correspondingly.
+The application is running locally on port 5000. The web pages demonstrates the current time in Moscow. As the page is refreshed the time updates correspondingly.
 
 Press `CTRL+C` in terminal to stop the application.
 
@@ -99,8 +130,8 @@ deactivate
 
 **Marina Ivanova, Innopolis University BS18-SE-01**
 
-+ Github: @mari1647iv
-+ Email: m.ivanova@innopolis.university
+- Github: @mari1647iv
+- Email: m.ivanova@innopolis.university
 
 Project Link: https://github.com/mari1647iv/devops
 
@@ -110,6 +141,7 @@ Distributed under the MIT License. See `LICENSE.md` for more information.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/mari1647iv/devops.svg?style=for-the-badge
 [contributors-url]: https://github.com/mari1647iv/devops/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/mari1647iv/devops.svg?style=for-the-badge
