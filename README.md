@@ -1,7 +1,7 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Issues][issues-shield]][issues-url]
+[![CI][workflow-shield]][workflow-url]
 [![Docker][docker-shield]][docker-url]
+[![Issues][issues-shield]][issues-url]
+[![Contributors][contributors-shield]][contributors-url]
 [![MIT License][license-shield]][license-url]
 
 # Moscow Time - Python Web Application
@@ -161,11 +161,11 @@ Distributed under the MIT License. See `LICENSE.md` for more information.
 
 [contributors-shield]: https://img.shields.io/github/contributors/mari1647iv/devops.svg?style=for-the-badge
 [contributors-url]: https://github.com/mari1647iv/devops/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/mari1647iv/devops.svg?style=for-the-badge
-[forks-url]: https://github.com/mari1647iv/devops/network/members
 [issues-shield]: https://img.shields.io/github/issues/mari1647iv/devops.svg?style=for-the-badge
 [issues-url]: https://github.com/mari1647iv/devops/issues
 [docker-shield]: https://img.shields.io/docker/image-size/mari1647iv/devops?sort=date&style=for-the-badge
 [docker-url]: https://hub.docker.com/r/mari1647iv/devops/
 [license-shield]: https://img.shields.io/github/license/mari1647iv/devops.svg?style=for-the-badge
 [license-url]: https://github.com/mari1647iv/devops/blob/main/LICENSE.md
+[workflow-shield]: https://img.shields.io/github/workflow/status/mari1647iv/devops/Python%20App%20Continuous%20Integration?style=for-the-badge
+[workflow-url]: https://github.com/mari1647iv/devops/actions/workflows/app_python_CI.yml
