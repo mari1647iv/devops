@@ -1,11 +1,17 @@
 pipeline {
-    agent any
+    agent { 
+        docker { 
+            image 'python:3.8-alpine'
+            args '-u 0'
+        } 
+    }
 
     stages {
 
         stage('Install dependencies') {
             steps {
                 sh 'docker pull python:3.8 '
+                sh 'python pip install --upgrade pip'
                 sh 'python3 -m pip install -r app_python/requirements.txt'
                 sh 'python3 -m pip install flake8'
             }
