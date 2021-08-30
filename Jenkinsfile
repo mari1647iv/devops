@@ -2,15 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
 
         stage('Install dependencies') {
             steps {
-                sh 'apk add --no-cache gcc musl-dev linux-headers'
+                sh 'docker pull python:3.8 '
                 sh 'python3 -m pip install -r app_python/requirements.txt'
                 sh 'python3 -m pip install flake8'
             }
