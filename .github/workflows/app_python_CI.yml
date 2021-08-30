@@ -1,5 +1,4 @@
 name: Python App Continuous Integration
-author: Marina Ivanova (@mari1647iv)
 
 on:
   push:
