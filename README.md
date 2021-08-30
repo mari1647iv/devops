@@ -20,6 +20,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
+    <li><a href="#unit_tests">Unit Tests</a></li>
     <li><a href="#author">Author</a></li>
     <li><a href="#license">License</a></li>
   </ul>
@@ -130,6 +131,16 @@ Do not forget to leave the virtual environment:
 ```bash
 cd ..
 deactivate
+```
+
+## Unit Tests <a name = "unit_tests"></a>
+
+Unit tests are written in python using `unittest` framework and stored in `test_main.py` file.
+
+To run the tests you can use the following command in the `app_python` folder:
+
+```bash
+python3 -m unittest test_main.py
 ```
 
 ## Author <a name = "author"></a>
