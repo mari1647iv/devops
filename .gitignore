@@ -2,3 +2,4 @@
 /links
 links_*.txt
 __pycache__
+.terraform/
