@@ -20,4 +20,25 @@
 
 ## Jenkins Best Practices
 
-- Jenkins
+- Keep Jenkins secure at all times
+  - set access control
+  - enable Cross Site Request Forgery (CSRF) Protection
+  - use Jobs Restrictions Plugin to filter jobs that can be run on the master node
+- Always backup The “JENKINS_HOME” directory
+- Setup different job/project for each maintenance or development branch created
+- Reduce repetition of similar Pipeline steps
+- Avoid calls to Jenkins.getInstance
+- Do not override built-in Pipeline steps
+- Avoid large global variable declaration files
+- Avoid very large shared libraries
+- Avoid NotSerializableException
+- Ensure Persisted Variables Are Serializable
+- Do not assign non-serializable objects to variables
+- Prevent resource collisions in jobs that are running in parallel
+- Use “File Fingerprinting” to manage dependencies
+- Making sure to use Groovy code in Pipelines as glue
+- Avoid complex Groovy code in Pipelines
+- Build scalable Jenkins Pipeline
+- Manage declarative syntax/declarative Pipelines
+- Maintain higher test code coverage and run unit tests as part of your Pipeline
+- Monitor your CI/CD Pipeline

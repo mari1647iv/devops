@@ -17,7 +17,7 @@
 - Separate Virtual Environment for Each Project
 - Avoid Importing Everything from Package
 - Use Linters:
-  - `pylint` - for Python
+  - `pylint`, `flake8` - for Python
   - `markdownlint` - for Markdown
 
 ## Application Unit Tests
