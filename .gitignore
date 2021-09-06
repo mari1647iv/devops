@@ -4,3 +4,5 @@ links_*.txt
 __pycache__
 .terraform/
 terraform.tfstate
+.vagrant
+*.log
