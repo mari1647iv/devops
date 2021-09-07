@@ -1,0 +1,4 @@
+app_image: mari1647iv/devops
+app_tag: app_python
+app_port: 5000
+app_path: /opt/app_python

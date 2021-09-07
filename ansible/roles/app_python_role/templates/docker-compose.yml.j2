@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  app_python:
+    image: "{{ app_image }}:{{ app_tag }}"
+    restart: always
+    ports:
+      - "{{ app_port }}:{{ app_port }}"

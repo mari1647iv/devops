@@ -1,15 +1,35 @@
 # Run Ansible using Vagrant
 
-From the `vagrant` folder run the following command to start the virtual machine
+## Run the Python Application
+
+From the `vagrant/python_app_vm` folder run the following command to start the virtual machine
 
 ```bash
 vagrant up
 ```
 
-When the vagrant VM was created and the playbook was provisioned, you can connect the VM
+When the vagrant VM was created and the playbook was provisioned, you can connect the VM and check the correctness of app launch
 
 ```bash
 vagrant ssh
+curl -Is http://localhost:5000
+```
+
+Enter `logout` or press `CTRL+D` to close the connection
+
+## Run the Docker installation only
+
+From the `vagrant/docker_vm` folder run the following command to start the virtual machine
+
+```bash
+vagrant up
+```
+
+When the vagrant VM was created and the playbook was provisioned, you can connect the VM and check the correctness of docker installation
+
+```bash
+vagrant ssh
+docker --version
 ```
 
 Enter `logout` or press `CTRL+D` to close the connection

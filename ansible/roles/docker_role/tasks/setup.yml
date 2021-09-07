@@ -25,6 +25,12 @@
   package: name=curl state=present
   when: add_repository_key is failed
 
+- name: Ensure pip is present.
+  become: true
+  package:
+    name: "python3-pip"
+    state: present
+
 - name: Add Docker apt key (alternative for older systems without SNI).
   shell: >
     curl -sSL {{ docker_apt_gpg_key }} | sudo apt-key add -

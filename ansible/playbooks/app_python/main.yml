@@ -1,0 +1,7 @@
+---
+- name: "Python App Image Deployment"
+  hosts: all
+  become: true
+  roles:
+    - "docker_role"
+    - "app_python_role"

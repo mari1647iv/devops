@@ -33,6 +33,13 @@
 - name: Ensure handlers are notified now to avoid firewall conflicts.
   meta: flush_handlers
 
+- name: Install Python docker libraries
+  pip:
+    name:
+      - docker==5.0.2
+      - docker-compose=={{ docker_compose_version }}
+    state: present
+
 - include_tasks: docker-compose.yml
   when: docker_install_compose | bool
 
