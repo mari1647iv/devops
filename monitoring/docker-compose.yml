@@ -15,9 +15,10 @@ services:
     logging:
       driver: "json-file"
       options:
-        max-size: "100m"
-        max-file: "10"
+        max-size: "10m"
+        max-file: "6"
         tag: "{{.ImageName}}|{{.Name}}"
+    mem_limit: 256m
 
   grafana:
     container_name: plg-monitoring.grafana
@@ -28,11 +29,12 @@ services:
       - "3000:3000"
     volumes:
       - ./grafana/grafana.ini:/etc/grafana/grafana.ini
-      - ./grafana/provisioning/datasources/datasource.yml:/etc/grafana/provisioning/datasources/datasource.yml
+      - ./grafana/provisioning:/etc/grafana/provisioning
       - grafana-data:/var/lib/grafana
     restart: unless-stopped
     networks:
       - plg-monitoring
+    mem_limit: 256m
     labels:
       org.label-schema.group: "monitoring"
 
@@ -52,6 +54,7 @@ services:
     restart: unless-stopped
     networks:
       - plg-monitoring
+    mem_limit: 256m
     labels:
       org.label-schema.group: "monitoring"
 
@@ -68,6 +71,25 @@ services:
     restart: unless-stopped
     networks:
       - plg-monitoring
+    mem_limit: 256m
+    labels:
+      org.label-schema.group: "monitoring"
+
+  prometheus:
+    container_name: plg-monitoring.prometheus
+    image: prom/prometheus:${PROMETHEUS_VERSION}
+    expose:
+      - 9090
+    ports:
+      - "9090:9090"
+    volumes:
+      - prometheus-data:/prometheus
+      - ./prometheus.yml:/etc/plg/prometheus.yml
+    command:
+      - "--config.file=/etc/plg/prometheus.yml"
+    networks:
+      - plg-monitoring
+    mem_limit: 256m
     labels:
       org.label-schema.group: "monitoring"
 
@@ -78,3 +100,4 @@ volumes:
   grafana-data: {}
   loki-data: {}
   promtail-data: {}
+  prometheus-data: {}

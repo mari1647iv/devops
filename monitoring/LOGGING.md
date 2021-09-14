@@ -1,4 +1,4 @@
-# Logging
+# Monitoring: Logging & Metrics
 
 ## PLG Stack
 
@@ -18,7 +18,7 @@ docker-compose up -d
 
 to run it in detached mode.
 
-## Results
+## Lab 7 Results
 
 ![PLG Labels](./images/PLG_labels.png)
 ![PLG App Logs](./images/PLG_all_app_logs.png)
@@ -54,3 +54,13 @@ to run it in detached mode.
 - Do not copy dashboards with no significant changes
 - When you must copy a dashboard, clearly rename it and do not copy the dashboard tags
 - Maintain a dashboard of dashboards or cross-reference dashboards
+
+## Metrics
+
+Lab 8 was focused on the metrics obtaining and the Prometheus tool. You can see the results of this lab below.
+
+## Lab 8 Results
+
+![Prometheus Targets](./images/Prometheus_targets.png)
+![Loki Metrics](./images/Loki_metrics.png)
+![Prometheus Metrics](./images/Prometheus_metrics.png)
