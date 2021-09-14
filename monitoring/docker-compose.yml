@@ -1,0 +1,80 @@
+version: "3.7"
+
+services:
+  app:
+    container_name: plg-monitoring.app
+    image: mari1647iv/devops:app_python
+    expose:
+      - 5000
+    ports:
+      - "5000:5000"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    networks:
+      - plg-monitoring
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
+        max-file: "10"
+        tag: "{{.ImageName}}|{{.Name}}"
+
+  grafana:
+    container_name: plg-monitoring.grafana
+    image: grafana/grafana:${GRAFANA_VERSION}
+    expose:
+      - 3000
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./grafana/grafana.ini:/etc/grafana/grafana.ini
+      - ./grafana/provisioning/datasources/datasource.yml:/etc/grafana/provisioning/datasources/datasource.yml
+      - grafana-data:/var/lib/grafana
+    restart: unless-stopped
+    networks:
+      - plg-monitoring
+    labels:
+      org.label-schema.group: "monitoring"
+
+  promtail:
+    container_name: plg-monitoring.promtail
+    image: grafana/promtail:${LOKI_VERSION}
+    expose:
+      - 9080
+    ports:
+      - "9080:9080"
+    volumes:
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+      - promtail-data:/var/lib/promtail/positions
+      - ./promtail.yml:/etc/plg/promtail.yml
+    command:
+      - "-config.file=/etc/plg/promtail.yml"
+    restart: unless-stopped
+    networks:
+      - plg-monitoring
+    labels:
+      org.label-schema.group: "monitoring"
+
+  loki:
+    container_name: plg-monitoring.loki
+    image: grafana/loki:${LOKI_VERSION}
+    expose:
+      - 3100
+    ports:
+      - "3100:3100"
+    volumes:
+      - grafana-data:/var/lib/grafana
+    command: -config.file=/etc/loki/local-config.yaml
+    restart: unless-stopped
+    networks:
+      - plg-monitoring
+    labels:
+      org.label-schema.group: "monitoring"
+
+networks:
+  plg-monitoring:
+
+volumes:
+  grafana-data: {}
+  loki-data: {}
+  promtail-data: {}
