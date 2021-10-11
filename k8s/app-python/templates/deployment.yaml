@@ -50,7 +50,7 @@ spec:
           - name: MY_SECRET
             valueFrom:
               secretKeyRef:
-              - name: app-python-secret
+                name: app-python-secret
                 key: secret_string
       {{- with .Values.nodeSelector }}
       nodeSelector:
