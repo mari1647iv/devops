@@ -6,6 +6,8 @@ image:
   tag: app_python
   port: 5000
 
+secret_string: "secret"
+
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""

@@ -46,6 +46,12 @@ spec:
           #     port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          env:
+          - name: MY_SECRET
+            valueFrom:
+              secretKeyRef:
+              - name: app-python-secret
+                key: secret_string
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
