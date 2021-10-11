@@ -20,6 +20,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
+    <li><a href="#endpoints">Endpoints</a></li>
     <li><a href="#unit_tests">Unit Tests</a></li>
     <li><a href="#author">Author</a></li>
     <li><a href="#license">License</a></li>
@@ -132,6 +133,11 @@ Do not forget to leave the virtual environment:
 cd ..
 deactivate
 ```
+
+## Endpoints <a name = "endpoints"></a>
+
+- `/` - root path with current Moscow time
+- `/visits` - list of the root path `/` visits by the client.
 
 ## Unit Tests <a name = "unit_tests"></a>
 

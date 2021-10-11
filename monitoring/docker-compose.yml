@@ -9,6 +9,7 @@ services:
     ports:
       - "5000:5000"
     volumes:
+      - app-python-data:/app-python/cache
       - /var/run/docker.sock:/tmp/docker.sock:ro
     networks:
       - plg-monitoring
@@ -101,3 +102,4 @@ volumes:
   loki-data: {}
   promtail-data: {}
   prometheus-data: {}
+  app-python-data: {}
