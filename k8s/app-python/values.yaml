@@ -21,6 +21,7 @@ securityContext: {}
 service:
   type: LoadBalancer
   port: 5000
+  name: app-python-service
 
 ingress:
   enabled: false
@@ -40,6 +41,8 @@ resources:
   requests:
     cpu: 100m
     memory: 128Mi
+
+storage: 128M
 
 autoscaling:
   enabled: false
